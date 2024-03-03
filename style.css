@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    /* Custom colors */
+    --cc-primary: hsl(47, 88%, 63%);
+    --cc-lt: hsl(0, 0%, 100%);
+    --cc-x-dk: hsl(0, 0%, 7%);
+    --cc-grey: hsl(0, 0%, 50%);
+
+    /* Font styles */
+    --ff-main: "Figtree", sans-serif;
+    --ff-secondary: ;
+
+    /* Font weights */
+    --fw-lt: 300;
+    --fw-reg: 400;
+    --fw-med: 500;
+    --fw-sm-bold: 600;
+    --fw-bold: 700;
+    --fw-x-bold: 800;
+    --fw-black: 900;
+}
+
+/* Reset browser defaults */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff-main);
+    min-height: 100vh;
+    background: var(--cc-primary);
+    color: var(--cc-x-dk);
+}
+
+/* Flex Classes */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+    padding-top: 20px;
+}
+
+/* Card */
+.card {
+    width: clamp(325px, 90%, 400px);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 10px 15px;
+    background: var(--cc-lt);
+    margin-bottom: 25px;
+}
+
+.card * {
+    margin-bottom: 10px;
+}
+
+.card__img-container {
+    width: 100%;
+    border-radius: 5px;
+    justify-self: center;
+    margin-bottom: 10px;
+}
+
+.card__img {
+    border-radius: 5px;
+    width: 100%;
+}
+
+.card__tag {
+    padding: 8px 16px;
+    background: var(--cc-primary);
+    font-weight: var(--fw-med);
+    width: max-content;
+    font-weight: var(--fw-x-bold);
+    border-radius: 5px;
+}
+
+.card__date {
+    font-weight: var(--fw-med);
+}
+
+.card__title {
+    font-weight: var(--fw-x-bold);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.card__title:hover {
+    color: var(--cc-primary);
+}
+
+.card__footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.card__author {
+    font-weight: var(--fw-x-bold);
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+
+/* Attribution */
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
